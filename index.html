@@ -1,87 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ballistic Security | Access Control, Burglar Alarms, Cameras & Cloud Recording</title>
-    <!-- Canonical -->
-    <link rel="canonical" href="https://ballisticalarm.com/" />
-    <!-- Primary SEO -->
-    <meta name="description" content="Professional security systems for homes and businesses with monitoring from just $28/month residential ($32 commercial). Teachers and first responders save with $25/month plans. Pay yearly and get 10% off (only $302/year). Enjoy unlimited cameras for the same flat rate. Licensed AC440832. Call (918) 613-5957 for your free quote." />
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ballistic Security – Protect. Monitor. Control." />
-    <meta property="og:description" content="Monitoring from $28/month residential ($32 commercial) – $25/month for teachers & first responders. Save 10% when you pay yearly and get the same price whether you have 1 camera or 20." />
-    <meta property="og:url" content="https://ballisticalarm.com/" />
-    <meta property="og:image" content="https://ballisticalarm.com/images/social-card.jpg" />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ballistic Security – Protect. Monitor. Control." />
-    <meta name="twitter:description" content="Monitoring from $28/month residential ($32 commercial). Teachers & first responders pay $25/month. Pay yearly and save 10%. Unlimited cameras same price." />
-    <meta name="twitter:image" content="https://ballisticalarm.com/images/social-card.jpg" />
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Ballistic Security",
-      "image": ["https://ballisticalarm.com/images/logo.png"],
-      "@id": "https://ballisticalarm.com/",
-      "url": "https://ballisticalarm.com/",
-      "telephone": "9186135957",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tulsa",
-        "addressRegion": "OK",
-        "addressCountry": "US"
-      },
-      "priceRange": "$$",
-      "description": "Security systems, surveillance, access control, burglar alarms"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ballistic Security | Access Control, Burglar Alarms, Cameras & Cloud Recording</title>
+  <link rel="canonical" href="https://ballisticalarm.com/" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Professional security systems for homes and businesses. Access Control, Burglar Alarms, Security Cameras, Cloud Recording. Licensed AC440832. Call (918) 613-5957 for your free quote." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ballistic Security – Protect. Monitor. Control." />
+  <meta property="og:description" content="Professional security solutions: Access Control, Burglar Alarms, Cameras & Cloud Recording. Get your free quote today!" />
+  <meta property="og:image" content="https://ballisticalarm.com/social-card.png" />
+  <meta property="og:url" content="https://ballisticalarm.com/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ballistic Security – Protect. Monitor. Control." />
+  <meta name="twitter:description" content="Professional security solutions: Access Control, Burglar Alarms, Cameras & Cloud Recording. Get your free quote today!" />
+  <meta name="twitter:image" content="https://ballisticalarm.com/social-card.png" />
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ballistic Security",
+    "image": ["https://ballisticalarm.com/social-card.png"],
+    "@id": "https://ballisticalarm.com/",
+    "url": "https://ballisticalarm.com/",
+    "telephone": "9186135957",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tulsa",
+      "addressRegion": "OK",
+      "addressCountry": "US"
+    },
+    "priceRange": "$$",
+    "description": "Security systems, surveillance, access control, burglar alarms"
+  }
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    #hero { min-height: 88vh; }
+    @media (max-width: 640px) {
+      #hero { min-height: 92vh; }
+      .hero-title { font-size: 2.25rem; line-height: 1.1; }
+      .hero-sub { font-size: 1.125rem; }
     }
-    </script>
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Hero height adjustments */
-      #hero { min-height: 88vh; }
-      @media (max-width: 640px) { #hero { min-height: 92vh; } }
-      .text-glow { text-shadow: 0 3px 10px rgba(0,0,0,0.55); }
-      /* Floating call button */
-      .floating-phone-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 40;
-        background: #dc2626;
-        color: white;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-        animation: pulse 2.5s infinite;
-        text-decoration: none;
-      }
-      @keyframes pulse {
-        0% { box-shadow: 0 6px 18px rgba(220,38,38,0.5); }
-        50% { box-shadow: 0 8px 30px rgba(220,38,38,0.7); }
-        100% { box-shadow: 0 6px 18px rgba(220,38,38,0.5); }
-      }
-      .floating-phone-btn:hover { background: #b91c1c; transform: scale(1.1); }
-      /* Smooth scrolling */
-      html { scroll-behavior: smooth; }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-900 font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow sticky top-0 z-30">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-4">
+    .text-glow { text-shadow: 0 3px 10px rgba(0,0,0,.55); }
+    .floating-phone-btn {
+      position: fixed; bottom: 20px; right: 20px; z-index: 40;
+      background: #dc2626; color: white; width: 60px; height: 60px; border-radius: 50%;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: pulse 2s infinite; text-decoration:none;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 4px 15px rgba(220,38,38,.4); }
+      50% { box-shadow: 0 4px 25px rgba(220,38,38,.6); }
+      100% { box-shadow: 0 4px 15px rgba(220,38,38,.4); }
+    }
+    .floating-phone-btn:hover { background:#b91c1c; transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between flex-wrap gap-4">
         <div class="flex items-center space-x-3">
-          <img src="/images/logo.png" alt="Ballistic Security logo" class="h-10 w-10" loading="eager" width="40" height="40" />
+          <img src="images/logo.png" alt="Ballistic Security logo" class="h-10 w-10" />
           <div>
             <span class="font-bold text-lg block">Ballistic Security</span>
             <span class="text-xs text-gray-600">License #: AC440832</span>
@@ -90,7 +86,7 @@
         <div class="hidden md:flex items-center space-x-6">
           <a href="tel:9186135957" class="text-red-600 font-semibold hover:text-red-800">(918) 613-5957</a>
           <a href="https://www.facebook.com/Ballisticoklahoma/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-red-600 hover:text-red-800">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.675 0h-21.35A1.33 1.33 0 000 1.325v21.351C0 23.411.589 24 1.325 24h11.52v-9.294H9.691V11.58h3.154V9.124c0-3.123 1.906-4.823 4.694-4.823 1.335 0 2.485.099 2.818.144v3.27l-1.934.001c-1.515 0-1.808.72-1.808 1.775v2.329h3.616l-.471 3.126h-3.145V24h6.168A1.33 1.33 0 0024 22.676V1.325A1.33 1.33 0 0022.675 0z"></path></svg>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.411.589 24 1.325 24h11.52v-9.294H9.691V11.58h3.154V9.124c0-3.123 1.906-4.823 4.694-4.823 1.335 0 2.485.099 2.818.144v3.27l-1.934.001c-1.515 0-1.808.72-1.808 1.775v2.329h3.616l-.471 3.126h-3.145V24h6.168C23.412 24 24 23.411 24 22.676V1.325C24 .59 23.411 0 22.675 0z"></path></svg>
           </a>
           <nav class="flex space-x-6 text-sm font-medium">
             <a href="#services" class="hover:text-red-600">Services</a>
@@ -99,153 +95,300 @@
             <a href="#access" class="hover:text-red-600">Access Control</a>
           </nav>
         </div>
-        <div class="flex items-center space-x-4">
-          <button id="mobileMenuButton" class="md:hidden text-gray-700 focus:outline-none" aria-label="Open menu">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-          </button>
-          <button id="couponBtn" class="bg-red-600 hover:bg-red-500 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors">Free Quote</button>
-        </div>
+        <button id="couponBtn" class="bg-red-600 hover:bg-red-500 text-white font-semibold px-4 py-2 rounded-lg text-sm">Free Quote</button>
       </div>
-    </header>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex flex-col items-center justify-center p-4">
-      <button id="mobileMenuClose" class="absolute top-4 right-4 text-white" aria-label="Close menu">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-      <nav class="space-y-6 text-white text-2xl text-center">
-        <a href="#services" class="block hover:text-red-400">Services</a>
-        <a href="#alarms" class="block hover:text-red-400">Alarms</a>
-        <a href="#cameras" class="block hover:text-red-400">Cameras</a>
-        <a href="#access" class="block hover:text-red-400">Access Control</a>
-      </nav>
-      <button id="couponBtnMobile" class="mt-10 bg-red-600 hover:bg-red-500 text-white font-semibold px-10 py-4 rounded-lg text-xl">Get My Free Quote</button>
     </div>
-    <!-- Hero Section -->
-    <section id="hero" class="relative bg-cover bg-center flex items-center justify-center" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/hero-security.png')">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
-      <div class="relative z-10 text-center text-white px-4">
-        <h1 class="hero-title text-white font-extrabold text-5xl md:text-6xl text-glow mb-6">Protect. Monitor. Control.</h1>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6 max-w-4xl mx-auto">
-          <div class="text-glow"><div class="text-lg font-bold">ACCESS CONTROL</div></div>
-          <div class="text-glow"><div class="text-lg font-bold">BURGLAR ALARM</div></div>
-          <div class="text-glow"><div class="text-lg font-bold">CAMERAS</div></div>
-          <div class="text-glow"><div class="text-lg font-bold">CLOUD RECORDING</div></div>
-        </div>
-        <p class="hero-sub text-white/95 text-xl md:text-2xl text-glow max-w-xl mx-auto mb-8">
-          <strong>Monitoring from $28/mo (Residential) & $32/mo (Commercial)</strong><br />
-          Teachers & First Responders: $25/mo · Pay yearly and get 10% off<br />
-          Unlimited cameras – same price whether you have 1 or 20
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative bg-cover bg-center flex items-center justify-center"
+           style="background-image:url('images/hero-security.png');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="hero-title text-white font-extrabold text-5xl md:text-6xl text-glow mb-6">
+        Protect. Monitor. Control.
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6 max-w-4xl mx-auto">
+        <div class="text-glow"><div class="text-lg font-bold">ACCESS CONTROL</div></div>
+        <div class="text-glow"><div class="text-lg font-bold">BURGLAR ALARM</div></div>
+        <div class="text-glow"><div class="text-lg font-bold">CAMERAS</div></div>
+        <div class="text-glow"><div class="text-lg font-bold">CLOUD RECORDING</div></div>
+      </div>
+      <p class="hero-sub text-white/95 text-xl md:text-2xl text-glow max-w-xl mx-auto mb-8">
+        <strong>Residential and Commercial Security</strong><br>Professional installation and monitoring solutions
+      </p>
+      <button id="couponBtnHero" class="bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-3 rounded-lg text-lg">
+        Get My Free Quote
+      </button>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Consultation, Installation and Servicing</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Our highly experienced security experts are here to help you design and build the solution you need to protect your home or business.
+          We offer top of the line equipment and user friendly solutions.
         </p>
-        <button id="couponBtnHero" class="bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-3 rounded-lg text-lg transition-transform hover:scale-105">Get My Free Quote</button>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold text-yellow-800 mb-2">🎁 Special Offer</h3>
+          <p class="text-yellow-700 font-semibold">Get 20% off your first month's bill when you refer a friend!</p>
+        </div>
       </div>
-    </section>
-    <!-- Services Overview -->
-    <section id="services" class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Consultation, Installation & Servicing</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">Our highly experienced security experts are here to help you design and build the solution you need to protect your home or business. We offer top-of-the-line equipment and user-friendly solutions.</p>
-          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 class="text-2xl font-bold text-yellow-800 mb-2">🎁 Special Offer</h3>
-            <p class="text-yellow-700 font-semibold">Get 20% off your first month's bill when you refer a friend!</p>
-          </div>
-        </div>
-        <div class="text-center mb-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Ask us about:</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></div>
-              <h4 class="font-semibold">Home Security Systems</h4>
+
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Ask us about:</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
+          <div class="text-center">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
             </div>
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div>
-              <h4 class="font-semibold">Business Security Systems</h4>
-            </div>
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></div>
-              <h4 class="font-semibold">Analog & IP Security Cameras</h4>
-            </div>
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg></div>
-              <h4 class="font-semibold">Access Control Systems</h4>
-            </div>
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
-              <h4 class="font-semibold">Cloud Recording</h4>
-            </div>
+            <h4 class="font-semibold">Home Security Systems</h4>
           </div>
-        </div>
-        <!-- Pricing Cards -->
-        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
-            <h4 class="text-xl font-bold text-red-600 mb-2">Standard</h4>
-            <p class="text-3xl font-extrabold text-gray-900 mb-2">$28/mo</p>
-            <p class="text-sm text-gray-600 mb-4">Residential • $32/mo Commercial</p>
-            <p class="text-sm text-gray-700">Month‑to‑month monitoring with no long‑term contract.</p>
+          <div class="text-center">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h4 class="font-semibold">Business Security Systems</h4>
           </div>
-          <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
-            <h4 class="text-xl font-bold text-red-600 mb-2">Teachers & First Responders</h4>
-            <p class="text-3xl font-extrabold text-gray-900 mb-2">$25/mo</p>
-            <p class="text-sm text-gray-700 mb-4">Residential special pricing</p>
-            <p class="text-sm text-gray-700">Show your ID and save on your security monitoring.</p>
+          <div class="text-center">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </div>
+            <h4 class="font-semibold">Analog & IP Security Cameras</h4>
           </div>
-          <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
-            <h4 class="text-xl font-bold text-red-600 mb-2">Yearly Plan</h4>
-            <p class="text-3xl font-extrabold text-gray-900 mb-2">10% OFF</p>
-            <p class="text-sm text-gray-600 mb-4">Only $302/year</p>
-            <p class="text-sm text-gray-700">Pay annually and save compared to month‑to‑month.</p>
+          <div class="text-center">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <h4 class="font-semibold">Access Control Systems</h4>
           </div>
-          <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
-            <h4 class="text-xl font-bold text-red-600 mb-2">Unlimited Cameras</h4>
-            <p class="text-3xl font-extrabold text-gray-900 mb-2">Same Price</p>
-            <p class="text-sm text-gray-600 mb-4">1 camera or 20 cameras</p>
-            <p class="text-sm text-gray-700">Enjoy the same monthly rate no matter how many cameras you need.</p>
+          <div class="text-center">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg>
+            </div>
+            <h4 class="font-semibold">Cloud Recording</h4>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-900 text-white">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4">Ready to Secure Your Property?</h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Monitoring starts at <strong>$28/mo residential</strong> ($32/mo commercial). Teachers & First Responders save with
-            <strong>$25/mo</strong> plans. Pay yearly and save 10% (only $302/year) and enjoy unlimited cameras at the same price.
-            Get your free quote and custom security solution today.
-          </p>
+
+      <!-- Pricing highlights -->
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
+          <h4 class="text-xl font-bold text-red-600 mb-2">Standard</h4>
+          <p class="text-3xl font-extrabold text-gray-900 mb-2">$28/mo</p>
+          <p class="text-sm text-gray-600 mb-4">Residential • $32/mo Commercial</p>
+          <p class="text-sm text-gray-700">Month-to-Month monitoring with no long-term contract.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8 text-center mb-8">
-          <div>
-            <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Call Us</h3>
-            <a href="tel:9186135957" class="text-gray-300 hover:text-white text-lg transition-colors">(918) 613-5957</a>
-          </div>
-          <div>
-            <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Licensed</h3>
-            <p class="text-gray-300">License #: AC440832</p>
-          </div>
-          <div>
-            <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Fast Response</h3>
-            <p class="text-gray-300">Quick installation & service</p>
-          </div>
+        <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
+          <h4 class="text-xl font-bold text-red-600 mb-2">Teachers & First Responders</h4>
+          <p class="text-3xl font-extrabold text-gray-900 mb-2">$25/mo</p>
+          <p class="text-sm text-gray-700 mb-4">Residential special pricing</p>
+          <p class="text-sm text-gray-700">Show your ID and save on your security monitoring.</p>
         </div>
-        <div class="text-center">
-          <button id="contactCouponBtn" class="bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-3 rounded-lg text-lg transition-transform hover:scale-105">Claim My 1st Month Free</button>
+        <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
+          <h4 class="text-xl font-bold text-red-600 mb-2">Yearly Plan</h4>
+          <p class="text-3xl font-extrabold text-gray-900 mb-2">10% OFF</p>
+          <p class="text-sm text-gray-600 mb-4">Only $302/year</p>
+          <p class="text-sm text-gray-700">Pay annually and save compared to month-to-month.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gray-50 hover:shadow-md transition-shadow">
+          <h4 class="text-xl font-bold text-red-600 mb-2">Unlimited Cameras</h4>
+          <p class="text-3xl font-extrabold text-gray-900 mb-2">Same Price</p>
+          <p class="text-sm text-gray-600 mb-4">1 camera or 20 cameras</p>
+          <p class="text-sm text-gray-700">Enjoy the same monthly rate no matter how many cameras you need.</p>
         </div>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-8">
-      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    </div>
+  </section>
+
+  <!-- Middle CTA -->
+  <section class="py-16 bg-red-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Ready to Secure Your Property?</h2>
+      <p class="text-xl text-red-100 max-w-2xl mx-auto mb-8">
+        Professional security installation available this week. Don’t wait – protect what matters most today.
+      </p>
+      <button id="couponBtnMiddle" class="bg-white text-red-600 hover:bg-red-50 font-semibold px-8 py-3 rounded-lg text-lg">
+        Secure My Home Now
+      </button>
+    </div>
+  </section>
+
+  <!-- Burglar Alarms -->
+  <section id="alarms" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <img src="images/burglar-alarms.png" alt="Burglar Alarms" class="mx-auto mb-6 max-w-xs rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Burglar Alarms</h2>
+        <h3 class="text-2xl font-semibold text-red-600 mb-8">Residential/Commercial Alarms</h3>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h4 class="text-xl font-bold mb-6">Do you need:</h4>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start"><span class="text-red-600 mr-3">•</span><span>Your Home or Business wired for alarms?</span></li>
+            <li class="flex items-start"><span class="text-red-600 mr-3">•</span><span>A wireless system because it's too late to wire the alarm?</span></li>
+            <li class="flex items-start"><span class="text-red-600 mr-3">•</span><span>To add a Keypad in the bedroom for convenience?</span></li>
+          </ul>
+          <div class="mt-8 p-6 bg-red-50 rounded-lg">
+            <p class="text-lg font-bold text-red-800 mb-2">If you answered yes to one of the above or have something else in mind,</p>
+            <p class="text-lg font-bold text-red-800">give us a call today – we would be glad to assist you.</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Tired of calling around for prices...</h4>
+          <p class="text-lg mb-6">Let us take the "B.S." out of it and get right to the point!</p>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h5 class="text-lg font-bold mb-4 text-gray-900">What's included:</h5>
+            <ul class="space-y-3">
+              <li class="flex items-center"><span class="text-green-600 mr-3">✓</span><span><strong>$28.00 a month monitoring for residential</strong></span></li>
+              <li class="flex items-center"><span class="text-green-600 mr-3">✓</span><span><strong>$32.00 a month monitoring for commercial</strong></span></li>
+              <li class="flex items-center"><span class="text-green-600 mr-3">✓</span><span><strong>No long term contracts – Just Month to Month</strong></span></li>
+              <li class="flex items-center"><span class="text-green-600 mr-3">✓</span><span><strong>Cell phone App is included, not extra</strong></span></li>
+              <li class="flex items-center"><span class="text-green-600 mr-3">✓</span><span><strong>Remote arm/disarm</strong></span></li>
+              <li class="flex items-center"><span class="text-green-600 mr-3">✓</span><span><strong>Push notifications on activity</strong></span></li>
+            </ul>
+            <div class="mt-6 text-center">
+              <p class="text-2xl font-bold text-red-600">"B.S." Free Guarantee!!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Cameras -->
+  <section id="cameras" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-8">Security Cameras</h2>
+      </div>
+
+      <div class="space-y-16">
+        <!-- Standalone Recorders -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div><img src="images/standalone-recorders.png" alt="Standalone Recorders" class="w-full rounded-lg shadow-lg"></div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Standalone Recorders</h3>
+            <p class="text-lg text-gray-700">If you're in the market for a standalone system that doesn't cost you monthly, we have options and can design you a custom system to fit your needs.</p>
+          </div>
+        </div>
+
+        <!-- IP Cameras -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="md:order-2"><img src="images/ip-cameras.png" alt="IP Cameras" class="w-full rounded-lg shadow-lg"></div>
+          <div class="md:order-1">
+            <h3 class="text-2xl font-bold mb-4">IP Cameras</h3>
+            <p class="text-lg text-gray-700 mb-4">Want us to run cat5/cat6 cable and install IP cameras for your home or business? Want the ease of just upgrading from 3 mega pixel camera to 4K?</p>
+            <p class="text-lg font-bold text-red-600">Call us to see what options best fit your expectations.</p>
+          </div>
+        </div>
+
+        <!-- Analog/HDoC -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div><img src="images/analog-hdoc.png" alt="Analog/HDoC cameras" class="w-full rounded-lg shadow-lg"></div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Analog/HDoC</h3>
+            <p class="text-lg text-gray-700">Have an old outdated analog system and don't want to have the cost or hassle of pulling new wires? We have the ability to get you HD cameras to get you better visibility without pulling wires.</p>
+          </div>
+        </div>
+
+        <!-- Offsite Cloud Recording -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="md:order-2"><img src="images/offsite-cloud-recording.png" alt="Offsite Cloud Recording" class="w-full rounded-lg shadow-lg"></div>
+          <div class="md:order-1">
+            <h3 class="text-2xl font-bold mb-4">Offsite Cloud Recording</h3>
+            <p class="text-lg text-gray-700">Only want a camera or two without all the upfront cost? Don't want to have to worry about recorded footage if someone steals or destroys a NVR? Want redundancy on your business security? We offer secure cloud recording with remote viewing.</p>
+          </div>
+        </div>
+
+        <!-- Bank Level Security -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div><img src="images/bank-level-security.png" alt="Bank Level Security" class="w-full rounded-lg shadow-lg"></div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Bank Level Security</h3>
+            <p class="text-lg text-gray-700">If you want top of the line security then our cloud recording is the perfect option. Don't want hackers to peep in on you? We have bank level security which means the cameras are encrypted and protected.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access Control -->
+  <section id="access" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-8">Access Control</h2>
+      </div>
+
+      <div class="space-y-16">
+        <!-- Need Access Control -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div><img src="images/need-access-control.png" alt="Need Access Control" class="w-full rounded-lg shadow-lg"></div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Need Access Control?</h3>
+            <p class="text-lg text-gray-700 mb-4">Our state of the art equipment cuts installation costs down for the customer and install time down so we are in and out before you know it.</p>
+            <p class="text-lg font-bold text-red-600">Email or call us today so we can design the right system for you and get you secured.</p>
+          </div>
+        </div>
+
+        <!-- User Friendly -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="md:order-2"><img src="images/user-friendly.png" alt="User Friendly Services" class="w-full rounded-lg shadow-lg"></div>
+          <div class="md:order-1">
+            <h3 class="text-2xl font-bold mb-4">User Friendly Services!</h3>
+            <p class="text-lg text-gray-700">We have partnered with top of the line equipment that gives user friendly access and management for all your access control needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Ready to Secure Your Property?</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">Get your free quote and custom security solution today.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 text-center mb-8">
+        <div>
+          <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Call Us</h3>
+          <a href="tel:9186135957" class="text-gray-300 hover:text-white text-lg">(918) 613-5957</a>
+        </div>
+        <div>
+          <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Licensed</h3>
+          <p class="text-gray-300">License #: AC440832</p>
+        </div>
+        <div>
+          <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Fast Response</h3>
+          <p class="text-gray-300">Quick installation & service</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <button id="contactCouponBtn" class="bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-3 rounded-lg text-lg">
+          Claim My 1st Month Free
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-4 md:mb-0">
           <p>&copy; <span id="currentYear"></span> Ballistic Security. All rights reserved. License #: AC440832</p>
         </div>
@@ -257,169 +400,187 @@
           <a href="mailto:info@ballisticalarm.com" class="hover:text-white transition-colors">Email</a>
         </div>
       </div>
-    </footer>
-    <!-- Coupon Modal -->
-    <div id="couponModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
-      <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
-        <button onclick="closeCouponModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        <!-- Form Step -->
-        <div id="couponStepForm">
-          <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-4">Get Your Free Security Quote</h3>
-          <p id="modalDescription" class="text-gray-600 mb-6">Fill out your information to receive a complimentary security evaluation and custom quote.</p>
-          <form id="leadForm" class="space-y-4">
-            <input type="text" name="name" placeholder="Full Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
-            <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" title="Please enter a valid phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
-            <input type="email" name="email" placeholder="Email Address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
-            <select name="property_type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
-              <option value="">Select Property Type</option>
-              <option value="Home">Home / Residential</option>
-              <option value="Business">Business / Commercial</option>
-            </select>
-            <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-3 rounded-lg transition-colors">Get Free Quote</button>
-          </form>
-          <p id="msg" class="text-center mt-4 text-sm text-gray-600"></p>
-        </div>
-        <!-- Success Step -->
-        <div id="couponStepCode" class="text-center hidden">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Thank You!</h3>
-          <p id="successMessage" class="text-gray-600 mb-6">We'll contact you within 24 hours with your custom security quote.</p>
-          <img src="/images/security-coupon.png" alt="Security quote confirmation" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" />
-          <p class="text-sm text-gray-500 mt-4">Screenshot or save this confirmation</p>
-        </div>
+    </div>
+  </footer>
+
+  <!-- Coupon Modal -->
+  <div id="couponModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+      <button onclick="closeCouponModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" aria-label="Close">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Form Step -->
+      <div id="couponStepForm">
+        <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-4">Get Your Free Security Quote</h3>
+        <p id="modalDescription" class="text-gray-600 mb-6">Fill out your information to receive a complimentary security evaluation and custom quote.</p>
+
+        <form id="leadForm" class="space-y-4">
+          <input type="text" name="name" placeholder="Full Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
+          <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" title="Please enter a valid phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
+          <input type="email" name="email" placeholder="Email Address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
+          <select name="property_type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+            <option value="">Select Property Type</option>
+            <option value="Home">Home / Residential</option>
+            <option value="Business">Business / Commercial</option>
+          </select>
+          <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-3 rounded-lg">Get Free Quote</button>
+        </form>
+        <p id="msg" class="text-center mt-4 text-sm text-gray-600"></p>
+      </div>
+
+      <!-- Success Step -->
+      <div id="couponStepCode" class="text-center hidden" aria-live="polite">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Thank You!</h3>
+        <p id="successMessage" class="text-gray-600 mb-6">We'll contact you within 24 hours with your custom security quote.</p>
+        <img src="images/security-coupon.png" alt="Security Quote Confirmation" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" />
+        <p class="text-sm text-gray-500 mt-4">Screenshot or save this confirmation</p>
       </div>
     </div>
-    <!-- Floating Phone Button -->
-    <a href="tel:9186135957" class="floating-phone-btn" aria-label="Call Now">
-      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-    </a>
-    <!-- Scripts -->
-    <script>
-      // Set current year
-      document.getElementById('currentYear').textContent = new Date().getFullYear();
-      let currentCTAType = 'quote';
-      // CTA buttons configuration
-      const couponButtons = [
-        { btn: document.getElementById('couponBtn'), type: 'quote' },
-        { btn: document.getElementById('couponBtnHero'), type: 'quote' },
-        { btn: document.getElementById('contactCouponBtn'), type: 'credit' },
-        { btn: document.getElementById('couponBtnMobile'), type: 'quote' },
-      ].filter(item => item.btn);
-      couponButtons.forEach(({ btn, type }) => {
-        btn.addEventListener('click', () => {
-          currentCTAType = type;
-          closeMobileMenu();
-          openCouponModal(type);
+  </div>
+
+  <!-- Floating Phone Button -->
+  <a href="tel:9186135957" class="floating-phone-btn" aria-label="Call Now">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Modal elements
+    const couponModal = document.getElementById("couponModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const submitBtn = document.getElementById("submitBtn");
+    const successMessage = document.getElementById("successMessage");
+
+    let currentCTAType = 'quote'; // which CTA was clicked
+
+    // CTA buttons map
+    const couponButtons = [
+      { btn: document.getElementById("couponBtn"), type: 'quote' },
+      { btn: document.getElementById("couponBtnHero"), type: 'quote' },
+      { btn: document.getElementById("couponBtnMiddle"), type: 'secure' },
+      { btn: document.getElementById("contactCouponBtn"), type: 'credit' }
+    ].filter(item => item.btn);
+
+    couponButtons.forEach(({ btn, type }) => {
+      btn.addEventListener("click", () => {
+        currentCTAType = type;
+        openCouponModal(type);
+      });
+    });
+
+    function openCouponModal(ctaType = 'quote') {
+      switch (ctaType) {
+        case 'secure':
+          modalTitle.textContent = 'Secure Your Property Today';
+          modalDescription.textContent = 'Ready to protect your property? Get your personalized security solution quote now.';
+          submitBtn.textContent = 'Secure My Property Now';
+          successMessage.textContent = "We'll contact you within 24 hours to schedule your security installation.";
+          break;
+        case 'credit':
+          modalTitle.textContent = 'Claim Your 1st Month Free';
+          modalDescription.textContent = 'Get your first month of monitoring free plus a free security assessment.';
+          submitBtn.textContent = 'Claim My 1st Month Free';
+          successMessage.textContent = "We'll contact you within 24 hours to set up your free first month and schedule installation.";
+          break;
+        default:
+          modalTitle.textContent = 'Get Your Free Security Quote';
+          modalDescription.textContent = 'Fill out your information to receive a complimentary security evaluation and custom quote.';
+          submitBtn.textContent = 'Get Free Quote';
+          successMessage.textContent = "We'll contact you within 24 hours with your custom security quote.";
+      }
+
+      couponModal.classList.remove("hidden");
+      couponModal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeCouponModal() {
+      couponModal.classList.add("hidden");
+      couponModal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Form handling
+    const form = document.getElementById('leadForm');
+    const couponStepForm = document.getElementById('couponStepForm');
+    const couponStepCode = document.getElementById('couponStepCode');
+    const msg = document.getElementById('msg');
+
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycby1umYWia8AgZFM-Yg6wTv69C0DIhijK2rq7SnAZ_0JkyzvRVpF33OmhwfgIO3i1Z-d/exec';
+
+    // If already claimed, show success when opening modal
+    const alreadyClaimed = localStorage.getItem("ballisticCouponClaimed") === 'true';
+    if (alreadyClaimed) {
+      couponButtons.forEach(({ btn }) => {
+        btn.addEventListener("click", () => {
+          openCouponModal();
+          showSuccess();
         });
       });
-      // Modal functions
-      function openCouponModal(type = 'quote') {
-        const map = {
-          quote: {
-            title: 'Get Your Free Security Quote',
-            description: 'Fill out your information to receive a complimentary security evaluation and custom quote.',
-            button: 'Get Free Quote',
-            success: "We'll contact you within 24 hours with your custom security quote."
-          },
-          secure: {
-            title: 'Secure Your Property Today',
-            description: 'Ready to protect your property? Get your personalized security solution quote now.',
-            button: 'Secure My Property Now',
-            success: "We'll contact you within 24 hours to schedule your security installation."
-          },
-          credit: {
-            title: 'Claim Your 1st Month Free',
-            description: 'Get your first month of monitoring free plus a free security assessment.',
-            button: 'Claim My 1st Month Free',
-            success: "We'll contact you within 24 hours to set up your free first month and schedule installation."
-          }
-        };
-        const c = map[type] || map.quote;
-        document.getElementById('modalTitle').textContent = c.title;
-        document.getElementById('modalDescription').textContent = c.description;
-        document.getElementById('submitBtn').textContent = c.button;
-        document.getElementById('successMessage').textContent = c.success;
-        const modal = document.getElementById('couponModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.classList.add('overflow-hidden');
+    }
+
+    form?.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      const payload = {
+        name: form.name.value.trim(),
+        phone: form.phone.value.trim(),
+        email: form.email.value.trim(),
+        property_type: form.property_type.value,
+        cta_source: currentCTAType,
+        timestamp: new Date().toISOString()
+      };
+
+      localStorage.setItem('ballisticCouponClaimed', 'true');
+      msg.textContent = 'Submitting…';
+
+      try {
+        const qs = new URLSearchParams(payload).toString();
+        await fetch(`${ENDPOINT}?${qs}`, { method: 'GET', mode: 'no-cors' });
+        msg.textContent = "Thank you! We'll contact you within 24 hours.";
+        form.reset();
+        showSuccess();
+      } catch (err) {
+        console.error('Submission error:', err);
+        msg.textContent = "Thank you! We'll contact you within 24 hours.";
+        form.reset();
+        showSuccess();
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
       }
-      function closeCouponModal() {
-        const modal = document.getElementById('couponModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.classList.remove('overflow-hidden');
-      }
-      // Form handling
-      const form = document.getElementById('leadForm');
-      const couponStepForm = document.getElementById('couponStepForm');
-      const couponStepCode = document.getElementById('couponStepCode');
-      const msgEl = document.getElementById('msg');
-      const ENDPOINT = 'https://script.google.com/macros/s/AKfycby1umYWia8AgZFM-Yg6wTv69C0DIhijK2rq7SnAZ_0JkyzvRVpF33OmhwfgIO3i1Z-d/exec';
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true;
-        submitBtn.classList.add('btn-loading');
-        const payload = {
-          name: form.name.value.trim(),
-          phone: form.phone.value.trim(),
-          email: form.email.value.trim(),
-          property_type: form.property_type.value,
-          cta_source: currentCTAType,
-          timestamp: new Date().toISOString(),
-        };
-        localStorage.setItem('ballisticCouponClaimed', 'true');
-        msgEl.textContent = 'Submitting…';
-        try {
-          const qs = new URLSearchParams(payload).toString();
-          await fetch(`${ENDPOINT}?${qs}`, { method: 'GET', mode: 'no-cors' });
-          msgEl.textContent = "Thank you! We'll contact you within 24 hours.";
-          form.reset();
-          setTimeout(showSuccess, 1500);
-        } catch(err) {
-          console.error(err);
-          msgEl.textContent = "Thank you! We'll contact you within 24 hours.";
-          form.reset();
-          setTimeout(showSuccess, 1500);
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.classList.remove('btn-loading');
-        }
-      });
-      function showSuccess() {
-        couponStepForm.classList.add('hidden');
-        couponStepCode.classList.remove('hidden');
-      }
-      // Mobile menu functions
-      const mobileMenu = document.getElementById('mobileMenu');
-      const mobileMenuButton = document.getElementById('mobileMenuButton');
-      const mobileMenuClose = document.getElementById('mobileMenuClose');
-      mobileMenuButton.addEventListener('click', openMobileMenu);
-      mobileMenuClose.addEventListener('click', closeMobileMenu);
-      function openMobileMenu() {
-        mobileMenu.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
-      }
-      function closeMobileMenu() {
-        mobileMenu.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-      }
-      document.querySelectorAll('#mobileMenu nav a').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-      });
-      // Phone input formatting
-      const phoneInput = form.querySelector('input[name="phone"]');
-      phoneInput.addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length >= 6) {
-          value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
-        } else if (value.length >= 3) {
-          value = value.slice(0, 3) + '-' + value.slice(3);
-        }
-        e.target.value = value;
-      });
-    </script>
-  </body>
+    });
+
+    function showSuccess() {
+      couponStepForm.classList.add("hidden");
+      couponStepCode.classList.remove("hidden");
+    }
+
+    // Close modal on backdrop click
+    couponModal.addEventListener("click", function (e) {
+      if (e.target === couponModal) closeCouponModal();
+    });
+
+    // Basic phone auto-format
+    const phoneInput = document.querySelector('input[name="phone"]');
+    phoneInput?.addEventListener('input', function (e) {
+      let v = e.target.value.replace(/\D/g, '').slice(0,10);
+      if (v.length > 6) v = `${v.slice(0,3)}-${v.slice(3,6)}-${v.slice(6)}`;
+      else if (v.length > 3) v = `${v.slice(0,3)}-${v.slice(3)}`;
+      e.target.value = v;
+    });
+  </script>
+</body>
 </html>
