@@ -148,14 +148,26 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero with Prominent Logo -->
   <section id="hero" class="relative bg-cover bg-center flex items-center justify-center"
            style="background-image:url('images/hero-security.png');">
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
-    <div class="relative z-10 text-center text-white px-4 fade-in">
+    
+    <!-- PROMINENT LOGO AT TOP CENTER -->
+    <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+      <img src="images/logo.png" alt="Ballistic Security" class="h-20 w-20 md:h-24 md:w-24 bg-white rounded-full p-2 shadow-2xl" />
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 fade-in mt-20">
       <h1 class="hero-title text-white font-extrabold text-5xl md:text-6xl text-glow mb-6">
         Protect. Monitor. Control.
       </h1>
+      
+      <!-- NO CONTRACT BANNER -->
+      <div class="bg-red-600 text-white font-bold text-lg md:text-xl py-2 px-6 rounded-full inline-block mb-6 shadow-lg">
+        NO CONTRACT ALARM MONITORING
+      </div>
+      
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6 max-w-4xl mx-auto">
         <div class="text-glow hover:scale-105 transition-transform"><div class="text-lg font-bold">ACCESS CONTROL</div></div>
         <div class="text-glow hover:scale-105 transition-transform"><div class="text-lg font-bold">BURGLAR ALARM</div></div>
@@ -171,13 +183,13 @@
     </div>
   </section>
 
-  <!-- Trust Indicators -->
+  <!-- Trust Indicators - NO MORE 500+ CUSTOMERS -->
   <section class="py-8 bg-gray-900 text-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
         <div>
-          <div class="text-3xl font-bold text-red-500">500+</div>
-          <div class="text-sm">Satisfied Customers</div>
+          <div class="text-3xl font-bold text-red-500">NO</div>
+          <div class="text-sm">Contract Required</div>
         </div>
         <div>
           <div class="text-3xl font-bold text-red-500">24/7</div>
@@ -246,7 +258,7 @@
         </div>
       </div>
 
-      <!-- Updated Pricing highlights - Removed yearly and unlimited cameras, kept residential and teachers, added commercial -->
+      <!-- Pricing Section - 3 cards only -->
       <div class="mt-12 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         <div class="border-2 border-gray-200 rounded-lg p-6 text-center shadow-sm bg-gradient-to-b from-white to-gray-50 hover:shadow-xl hover:border-red-500 transition-all">
           <h4 class="text-xl font-bold text-red-600 mb-2">Residential</h4>
@@ -514,9 +526,9 @@
           <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" title="Please enter a valid phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
           <input type="email" name="email" placeholder="Email Address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" />
           <select name="property_type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
-            <option value="">Select Property Type</option>
-            <option value="Home">Home / Residential</option>
-            <option value="Business">Business / Commercial</option>
+            <option value="" disabled selected>Select Property Type</option>
+            <option value="Residential">Home / Residential</option>
+            <option value="Commercial">Business / Commercial</option>
           </select>
           <textarea name="message" placeholder="Tell us about your security needs (optional)" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" aria-label="Additional comments"></textarea>
           <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-3 rounded-lg transition-all">Get Free Quote</button>
@@ -628,22 +640,28 @@
       submitBtn.disabled = true;
       submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
 
-      const payload = {
+      // Get form values - ensure cta_source has a value
+      const formData = {
+        timestamp: new Date().toISOString(),
         name: form.name.value.trim(),
         phone: form.phone.value.trim(),
         email: form.email.value.trim(),
-        property_type: form.property_type.value,
-        message: form.message?.value.trim() || '',
-        cta_source: currentCTAType,
-        timestamp: new Date().toISOString()
+        property_type: form.property_type.value || 'Not specified',
+        cta_source: currentCTAType || 'quote', // Always have a fallback value
+        message: form.message.value.trim() || 'No additional comments'
       };
+
+      console.log('Submitting form data:', formData); // Debug log
 
       localStorage.setItem('ballisticLeadSubmitted', 'true');
       msg.textContent = 'Submitting…';
 
       try {
-        const qs = new URLSearchParams(payload).toString();
-        await fetch(`${ENDPOINT}?${qs}`, { method: 'GET', mode: 'no-cors' });
+        // Send data to Google Sheets
+        const qs = new URLSearchParams(formData).toString();
+        const url = `${ENDPOINT}?${qs}`;
+        console.log('Sending to:', url); // Debug log
+        await fetch(url, { method: 'GET', mode: 'no-cors' });
         msg.textContent = "Thank you! We'll contact you within 24 hours.";
         form.reset();
         setTimeout(showSuccess, 1000);
